@@ -134,13 +134,10 @@ img {
         font-size: 16px;
     }
 
-    .mobile_nav_ul {
-        top: 0;
-        left: 0;
-        background: linear-gradient(to right, #007bff, #00d4ff);
-        color: white;
+    .headNavUl {
         padding: 10px 0;
         text-align: center;
+        background: linear-gradient(to right, #007bff, #00d4ff);
     }
 
     .hero {
