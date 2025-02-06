@@ -123,6 +123,7 @@ img {
 
     nav ul li {
         padding: 5px 0;
+        background: linear-gradient(to right, #007bff, #00d4ff);
     }
 
     nav ul li a.large-text {
@@ -137,7 +138,6 @@ img {
     .headNavUl {
         padding: 10px 0;
         text-align: center;
-        background: linear-gradient(to right, #007bff, #00d4ff);
     }
 
     .hero {
