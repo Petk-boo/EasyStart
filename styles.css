@@ -7,7 +7,7 @@ body {
     color: #333;
 }
 
-/* Sticky Header (PC) */
+/* Header (PC) - Entire header sticky */
 header {
     position: sticky;
     top: 0;
@@ -119,12 +119,25 @@ img {
 
 /* MOBILE STYLES */
 @media (max-width: 768px) {
-    /* Remove sticky header */
+    /* Remove sticky from entire header */
     header {
         position: static;
     }
 
-    /* Navigation: Remove space between items and stack vertically */
+    /* Sticky Large-Text (Only on mobile) */
+    nav ul li a.large-text {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        background: linear-gradient(to right, #007bff, #00d4ff);
+        padding: 15px;
+        text-align: center;
+        z-index: 1000;
+        display: block;
+        font-weight: bold;
+    }
+
+    /* Stack Navigation Vertically (on mobile) */
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -133,21 +146,6 @@ img {
 
     nav ul li {
         padding: 5px 0;
-    }
-
-    /* Large Text (Easy Start) - Always Sticky on Mobile */
-    nav ul li a.large-text {
-        font-size: 30px;
-        margin-right: 0;
-        position: sticky;
-        top: 0;
-        background: linear-gradient(to right, #007bff, #00d4ff);
-        padding: 15px;
-        z-index: 1000;
-        text-align: center;
-        width: 100%;
-        display: block;
-        font-weight: bold;
     }
 
     /* Hide Small Navigation Links on Mobile */
