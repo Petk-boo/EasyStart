@@ -132,12 +132,7 @@ img {
 
     nav ul li a.small-text {
         font-size: 16px;
-    }
-
-    .headNavUl {
-        font-size: 80px;
-        padding: 10px 0;
-        text-align: center;
+        background: linear-gradient(to right, #007bff, #00d4ff);
     }
 
     .hero {
