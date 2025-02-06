@@ -9,15 +9,10 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a class="large-text" href="">Easy Start</a></li>
-                <li><a class="small-text" href="#features">Features</a></li>
-                <li><a class="small-text" href="#about">About</a></li>
-                <li><a class="small-text" href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div id="header"></div>
     </header>
+
+    <div id="header_mobile"></div>
 
     <section id="head" class="head">
         <div class="hero">
@@ -60,5 +55,64 @@
     <footer>
         <p>&copy; 2025 . All Rights Reserved.</p>
     </footer>
+
+    <script>
+        function createHeader() {
+            const headerContainer = document.getElementById('header');
+            const header_mobileContainer = document.getElementById('header_mobile');
+            const screenWidth = window.innerWidth;
+
+            // Desktop Header HTML
+            const desktopHeader = `
+                <header>
+                    <nav>
+                        <ul>
+                            <li><a class="large-text" href="">Easy Start</a></li>
+                            <li><a class="small-text" href="#features">Features</a></li>
+                            <li><a class="small-text" href="#about">About</a></li>
+                            <li><a class="small-text" href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            `;
+
+            // Mobile Header HTML
+            const mobileHeader = `
+                <header>
+                    <nav>
+                        <ul>
+                            <li><a class="large-text" href="">Easy Start</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            `;
+
+            const mobileHead = `
+                <section id="mobile_nav_ul" class="mobile_nav_ul">
+                    <nav>
+                        <ul>
+                            <li><a class="small-text" href="#features">Features</a></li>
+                            <li><a class="small-text" href="#about">About</a></li>
+                            <li><a class="small-text" href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </section>
+            `;
+
+
+            if (screenWidth <= 768) {
+                // If mobile, insert the mobile header
+                headerContainer.innerHTML = mobileHeader;
+                header_mobileContainer.innerHTML = mobileHead
+            } else {
+                // If desktop, insert the desktop header
+                headerContainer.innerHTML = desktopHeader;
+            }
+        }
+
+        // Adjust layout on page load and when the window is resized
+        window.addEventListener('load', createHeader);
+        window.addEventListener('resize', createHeader);
+    </script>
 </body>
 </html>
