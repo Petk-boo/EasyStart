@@ -135,6 +135,11 @@ img {
         background: linear-gradient(to right, #007bff, #00d4ff);
     }
 
+    .headNavUl {
+        padding: 10px 0;
+        text-align: center;
+    }
+
     .hero {
         padding: 30px 15px;
     }
