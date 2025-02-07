@@ -136,6 +136,8 @@ img {
 
     .headNavUl {
         text-align: center;
+        background: linear-gradient(to right, #007bff, #00d4ff);
+        padding: 10px 0;
     }
 
     .hero {

@@ -12,7 +12,9 @@
         <div id="header"></div>
     </header>
 
-    <div id="headNavUl"></div>
+    <section id="headNavUl" class="headNavUl">
+        <div id="headNav"></div>
+    </section>
 
     <section id="head" class="head">
         <div class="hero">
@@ -59,7 +61,7 @@
     <script>
         function createHeader() {
             const headerContainer = document.getElementById('header');
-            const header_mobileContainer = document.getElementById('headNavUl');
+            const header_mobileContainer = document.getElementById('headNav');
             const screenWidth = window.innerWidth;
 
             // Desktop Header HTML
@@ -88,15 +90,13 @@
             `;
 
             const mobileHead = `
-                <section id="headNavUl" class="headNavUl">
-                    <nav>
-                        <ul>
-                            <li><a class="small-text" href="#features">Features</a></li>
-                            <li><a class="small-text" href="#about">About</a></li>
-                            <li><a class="small-text" href="#contact">Contact</a></li>
-                        </ul>
-                    </nav>
-                </section>
+                <nav>
+                    <ul>
+                        <li><a class="small-text" href="#features">Features</a></li>
+                        <li><a class="small-text" href="#about">About</a></li>
+                        <li><a class="small-text" href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
             `;
 
 
