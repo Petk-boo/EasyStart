@@ -78,6 +78,11 @@
                 </header>
             `;
 
+            const desktopHead = `
+                <div>
+                </div>
+            `;
+
             // Mobile Header HTML
             const mobileHeader = `
                 <header>
@@ -107,6 +112,7 @@
             } else {
                 // If desktop, insert the desktop header
                 headerContainer.innerHTML = desktopHeader;
+                header_mobileContainer.innerHTML = desktopHead
             }
         }
 
